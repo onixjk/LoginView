@@ -17,9 +17,6 @@ class LoginViewController: UIViewController {
     private let password = "123123"
     
     // MARK: - Override methods
-    override func viewDidLoad() {
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController
         else { return }
