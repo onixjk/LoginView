@@ -16,6 +16,8 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainWelcomeLabel.text = "Welcome, \(userNameLabel.capitalized)!"
+        if let userNameLabel = userNameLabel {
+            mainWelcomeLabel.text = "Welcome, \(userNameLabel)!"
+        }
     }
 }

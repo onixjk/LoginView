@@ -30,8 +30,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func logInPressed() {
-        if userNameTF.text?.uppercased() != login.uppercased()
-            || passwordTF.text != password {        // я правильно перенес эту строчку или знак || нужно оставлять на предыдущей строчке?
+        if userNameTF.text != login
+            || passwordTF.text != password {
             showAlert(title: "Invalid login or password",
                       message: "Please, enter correct login and password",
                       textField: passwordTF)
