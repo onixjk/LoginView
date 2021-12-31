@@ -9,9 +9,13 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
-    @IBAction func logOutPressed() {
-        dismiss(animated: true)
+    
+    @IBOutlet weak var mainWelcomeLabel: UILabel!
+    
+    var userNameLabel: String!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        mainWelcomeLabel.text = "Welcome, \(userNameLabel.capitalized)!"
     }
-    
-    
 }
