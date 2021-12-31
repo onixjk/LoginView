@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     // MARK: - IB Outlets
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     private let password = "123123"
     
     // MARK: - Override methods
+    override func viewDidLoad() {
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController
         else { return }
@@ -65,4 +68,3 @@ class ViewController: UIViewController {
         present(alert, animated: true)
     }
 }
-
