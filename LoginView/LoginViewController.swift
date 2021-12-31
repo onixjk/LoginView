@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController
         else { return }
-        welcomeVC.userNameLabel = userNameTF.text
+        welcomeVC.userNameLabel = login
     }
     
     // MARK: - IB Actions
