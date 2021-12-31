@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - IB Outlets
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
@@ -54,6 +54,16 @@ class LoginViewController: UIViewController {
                   textField: passwordTF)
     }
     
+    // MARK: - Public Methods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTF {
+            passwordTF.becomeFirstResponder()
+        } else {
+            logInPressed()
+            performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+        }
+        return true
+    }
     
     // MARK: - Private Methods
     private func showAlert(title: String,
