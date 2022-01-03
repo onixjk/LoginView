@@ -15,9 +15,4 @@ class AboutMeViewController: UIViewController {
 
     }
     
-    // MARK: IB Action
-    @IBAction func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: AboutMeViewController) {
-        
-    }
-
 }
