@@ -9,8 +9,11 @@ import UIKit
 
 class AboutMeViewController: UIViewController {
     
-    var user: User!
+    // MARK: - IB Outlets
     @IBOutlet weak var aboutMeTV: UITextView!
+    
+    // MARK: - Public Properties
+    var user: User!
     
     // MARK: - Override methods
     override func viewDidLoad() {

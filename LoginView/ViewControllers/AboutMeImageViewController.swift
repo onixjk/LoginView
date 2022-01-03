@@ -8,14 +8,18 @@
 import UIKit
 
 class AboutMeImageViewController: UIViewController {
-
+    
+    // MARK: - IB Outlets
     @IBOutlet weak var imageView: UIImageView! {
         didSet {
             imageView.layer.cornerRadius = imageView.frame.height / 2
         }
     }
+    
+    // MARK: - Public Properties
     var user: User!
     
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
